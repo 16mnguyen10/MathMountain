@@ -1,12 +1,15 @@
 #
 #   Michael Nguyen
-#   December 3, 2020
+#   December 2, 2020
 #
 
+import platform
 import tkinter as tk
 from tkinter import *
 from tkinter import messagebox
 import random
+
+import pygame
 from PIL import ImageTk, Image
 
 # --- Colors
@@ -662,5 +665,11 @@ try:
     root.bind("<Return>", check_bind)
 except:
     pass
+
+# BGM
+if platform.system() == "Windows" or platform.system() == "Darwin":
+    pygame.init()
+    pygame.mixer.music.load("Frontierland.mp3")
+    pygame.mixer.music.play()
 
 root.mainloop()
