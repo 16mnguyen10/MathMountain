@@ -670,6 +670,6 @@ except:
 if platform.system() == "Windows" or platform.system() == "Darwin":
     pygame.init()
     pygame.mixer.music.load("Frontierland.mp3")
-    pygame.mixer.music.play()
+    pygame.mixer.music.play(-1)
 
 root.mainloop()
